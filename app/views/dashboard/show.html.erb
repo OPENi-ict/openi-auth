@@ -1,0 +1,56 @@
+<h1><%= 'dashboard.title'.t %></h1>
+<hr />
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= render @clients %>
+    
+    <p>
+      <%= button_to 'clients.new.title'.t, new_client_path, class: 'btn btn-success btn-lg', :method => "get" %>
+	</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= 'endpoint.help'.t %></h3>
+  </div>
+  <div class="panel-body">
+    <dl class="dl-horizontal">
+      <dt><%= 'endpoint.authorization'.t %></dt>
+      <dd><%= new_authorization_url %></dd>
+      <dt><%= 'endpoint.token'.t %></dt>
+      <dd><%= access_tokens_url %></dd>
+      <dt><%= 'endpoint.userinfo'.t %></dt>
+      <dd><%= user_info_url %></dd>
+    </dl>
+  </div>
+</div>
+
+<!--
+<section>
+  <h2><%= 'dashboard.title'.t %></h2>
+  <%= render @clients %>
+</section>
+
+<nav>
+  <p>
+    <%= link_to 'clients.new.title'.t, new_client_path %>
+  </p>
+</nav>
+
+<aside class="help">
+  <h3><%= 'help.title'.t %></h3>
+  <details>
+    <summary><%= 'endpoint.help'.t %></summary>
+    <dl>
+      <dt><%= 'endpoint.authorization'.t %></dt>
+      <dd><%= new_authorization_url %></dd>
+      <dt><%= 'endpoint.token'.t %></dt>
+      <dd><%= access_tokens_url %></dd>
+      <dt><%= 'endpoint.userinfo'.t %></dt>
+      <dd><%= user_info_url %></dd>
+    </dl>
+  </details>
+</aside>
+-->

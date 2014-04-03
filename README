@@ -1,0 +1,12 @@
+OPENi Auth Server
+=================
+
+Authentication and Authorization Server utilizes OpenID Connect standard to implement identity layer, which allows Clients applications to verify the identity of the User based on the authentication performed by Auth Server, as well as to obtain basic profile information about User.
+
+## Installation
+
+> # Setup database
+> rake db:setup
+>
+> # Start application
+> rails server -e development

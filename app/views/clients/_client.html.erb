@@ -1,0 +1,26 @@
+<h2><%= client.name %> <small>(<%= client.redirect_uris.try(:join, ' ') %>)</small></h2>
+<hr />
+
+
+  <%= link_to 'Edit'.t, edit_client_path(client), class: 'btn btn-success btn-sm', :method => "get" %>
+  <%= link_to 'Delete'.t, client_path(client), class: 'btn btn-danger btn-sm', method: :delete %>
+
+<dl class="dl-horizontal">
+  <dt><%= 'client.identifier'.t %></dt>
+  <dd><%= client.identifier %></dd>
+  <dt><%= 'client.secret'.t %></dt>
+  <dd><%= client.secret %></dd>
+</dl>
+
+
+<h3><%= 'authorizations.new.title'.t(client: client.name) %></h3>
+<% Client.available_response_types.each do |response_type| %>
+    <%= form_tag new_authorization_path, style: 'display: inline', method: :get do %>
+      <%= hidden_field_tag :client_id, client.identifier %>
+      <%= hidden_field_tag :response_type, response_type %>
+      <%= hidden_field_tag :scope, Scope.all.collect(&:name).join(' ') %>
+      <%= submit_tag response_type, class: 'btn btn-info btn-sm' %>
+    <% end %>
+<% end %>
+
+<hr />

@@ -1,0 +1,12 @@
+<h1><%= 'clients.edit.title'.t %></h1>
+<hr />
+
+  <%= form_for @client, :method => :put, :html => { :class => "form-horizontal" } do |f| %>
+    <%= render 'clients/form', client: @client, f: f %>
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <%= f.submit class: "btn btn-success" %>
+	    </div>
+	  </div>
+    
+  <% end %>

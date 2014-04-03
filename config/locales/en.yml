@@ -1,0 +1,44 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  # protocol
+  endpoint:
+    help: Protocol Endpoints
+    authorization: Authorization Endpoint
+    token: Token Endpoint
+    userinfo: UserInfo Endpoint
+  # per model
+  client:
+    identifier: Client ID
+    secret: Client Secret
+    credentials: Credentials
+  authorization:
+    scope: Requested Scopes
+  # per controller
+  site:
+    title: OPENi Auth Server
+    description: Connect Now!
+  top:
+    title: Please login
+    description: Login.
+  dashboard:
+    title: Registered Clients
+    help:
+      title: Endpoint Info
+  clients:
+    new:
+      title: Register New Client
+    edit:
+      title: Edit Client
+  authorizations:
+    new:
+      title: Authorize %{client} ?
+      description: After approved, you will be redirected to %{redirect_uri}
+  connect:
+    fakes:
+      new:
+        title: Login with OPENi Account
+  # others
+  help:
+    title: Help

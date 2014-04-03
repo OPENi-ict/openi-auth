@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+	<h1><span class="fa fa-lock"></span> <%= 'site.title'.t %></h1>
+	<% if authenticated? %>
+	    <%= form_tag session_path, method: :delete do  %>
+	      <%= submit_tag 'Logout'.t, class: 'btn btn-danger btn-lg' %>
+	    <% end %>
+	  <% end %>
+</div>
+<!--
+<header>
+  <h1><%= link_to 'site.title'.t, root_path %></h1>
+  <p><%= 'site.description'.t %></p>
+</header>
+-->
