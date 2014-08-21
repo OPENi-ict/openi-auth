@@ -1,6 +1,6 @@
 development_org: &defaults
-  client_id: 44054827399-fgalrsf4iuooofvtqairifbkp862s9ug.apps.googleusercontent.com
-  client_secret: q00q8Z0H2_wfSjmt2-CkRmQW
+  client_id: xxxxxx.apps.googleusercontent.com
+  client_secret: xxxxxx
   scope: https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
   redirect_uri: http://localhost/connect/google
   authorization_endpoint: https://accounts.google.com/o/oauth2/auth
@@ -9,8 +9,8 @@ development_org: &defaults
   userinfo_endpoint: https://www.googleapis.com/oauth2/v1/userinfo
   
 development: &defaults
-  client_id: 958546970983-pggpn2uqnksu7rcu9n97uqamcr6jt1u1.apps.googleusercontent.com
-  client_secret: 2IGZV2pJt5RpjC8UW1R_Aimw
+  client_id: xxxxxx.apps.googleusercontent.com
+  client_secret: xxxxxx
   scope: https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile
   redirect_uri: http://localhost:3000/connect/google
   authorization_endpoint: https://accounts.google.com/o/oauth2/auth
